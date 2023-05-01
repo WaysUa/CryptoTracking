@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = Config.packageName
+    namespace = Config.appModulePackageName
     compileSdk = Config.compileSdk
 
     defaultConfig {
-        applicationId = Config.packageName
+        applicationId = Config.appModulePackageName
         minSdk = Config.minSdk
         targetSdk = Config.targetSdk
         versionCode = Config.versionCode
@@ -26,8 +26,8 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
         jvmTarget = Config.jvmTarget
@@ -72,4 +72,6 @@ dependencies {
     implementation(Dependencies.Hilt.android)
     implementation(Dependencies.Hilt.compiler)
     implementation(Dependencies.Hilt.navigation)
+    //Modules
+    implementation(project(Modules.coreModule))
 }

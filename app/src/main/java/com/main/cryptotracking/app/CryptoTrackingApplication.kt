@@ -1,4 +1,4 @@
-package com.main.cryptotracking
+package com.main.cryptotracking.app
 
 import android.app.Application
 
