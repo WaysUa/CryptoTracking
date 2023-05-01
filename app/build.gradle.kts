@@ -74,4 +74,5 @@ dependencies {
     implementation(Dependencies.Hilt.navigation)
     //Modules
     implementation(project(Modules.coreModule))
+    implementation(project(Modules.featSplashScreenModule))
 }
