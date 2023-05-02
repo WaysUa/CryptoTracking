@@ -63,6 +63,8 @@ dependencies {
     androidTestImplementation(Dependencies.Test.jUnitUi)
     androidTestImplementation(Dependencies.Test.espresso)
     testImplementation(Dependencies.Test.jUnit)
+    //Splash Screen
+    implementation(Dependencies.SplashScreen.main)
     //Modules
     implementation(project(Modules.coreModule))
 }

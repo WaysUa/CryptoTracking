@@ -72,6 +72,8 @@ dependencies {
     implementation(Dependencies.Hilt.android)
     implementation(Dependencies.Hilt.compiler)
     implementation(Dependencies.Hilt.navigation)
+    //Splash Screen
+    implementation(Dependencies.SplashScreen.main)
     //Modules
     implementation(project(Modules.coreModule))
     implementation(project(Modules.featSplashScreenModule))
