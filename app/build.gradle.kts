@@ -76,5 +76,4 @@ dependencies {
     implementation(Dependencies.SplashScreen.main)
     //Modules
     implementation(project(Modules.coreModule))
-    implementation(project(Modules.featSplashScreenModule))
 }

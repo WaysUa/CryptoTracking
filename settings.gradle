@@ -15,4 +15,3 @@ dependencyResolutionManagement {
 rootProject.name = "CryptoTracking"
 include ':app'
 include ':core'
-include ':feat-splash-screen'
