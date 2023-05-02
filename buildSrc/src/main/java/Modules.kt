@@ -1,4 +1,4 @@
 object Modules {
     const val coreModule = ":core"
-    const val featSplashScreenModule = ":feat-splash-screen"
+    const val featOnBoardingModule = ":feat-onboarding"
 }

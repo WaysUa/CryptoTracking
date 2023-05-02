@@ -5,7 +5,7 @@ object Config {
 
     const val appModulePackageName = "com.main.voicevortex"
     const val coreModulePackageName = "com.main.core"
-    const val featSplashScreenModulePackageName = "com.main.feat_splash_screen"
+    const val featOnBoardingModulePackageName = "com.main.feat_onboarding"
 
     const val versionName = "1.0"
     const val versionCode = 1
