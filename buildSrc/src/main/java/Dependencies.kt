@@ -37,6 +37,13 @@ object Dependencies {
         const val navigationCompose = "androidx.navigation:navigation-compose:$version"
     }
 
+    object Pager {
+        private const val version = "0.26.4-beta"
+
+        const val pager = "com.google.accompanist:accompanist-pager:$version"
+        const val pagerIndicators = "com.google.accompanist:accompanist-pager-indicators:$version"
+    }
+
     object SplashScreen {
         const val main = "androidx.core:core-splashscreen:1.0.1"
     }

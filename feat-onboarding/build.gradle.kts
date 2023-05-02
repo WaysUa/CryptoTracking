@@ -63,6 +63,9 @@ dependencies {
     androidTestImplementation(Dependencies.Test.jUnitUi)
     androidTestImplementation(Dependencies.Test.espresso)
     testImplementation(Dependencies.Test.jUnit)
+    //Pager
+    implementation (Dependencies.Pager.pager)
+    implementation (Dependencies.Pager.pagerIndicators)
     //Modules
     implementation(project(Modules.coreModule))
 }
