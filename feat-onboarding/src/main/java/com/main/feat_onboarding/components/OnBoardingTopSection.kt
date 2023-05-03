@@ -37,6 +37,7 @@ fun OnBoardingTopSection(
         ) {
             Icon(
                 imageVector = Icons.Outlined.KeyboardArrowLeft,
+                tint = Color.White,
                 contentDescription = null
             )
         }

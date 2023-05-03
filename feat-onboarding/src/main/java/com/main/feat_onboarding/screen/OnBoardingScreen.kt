@@ -1,6 +1,5 @@
 package com.main.feat_onboarding.screen
 
-import android.util.Log
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -28,7 +27,6 @@ import kotlinx.coroutines.launch
 @OptIn(ExperimentalPagerApi::class)
 @Composable
 fun OnBoardingScreen(
-    //viewModel: OnBoardingViewModel = hiltViewModel(),
     popBackStack: () -> Unit,
 ) {
     val pager = listOf(
@@ -91,7 +89,6 @@ fun OnBoardingScreen(
         CustomOnBoardingButton(
             pagerState = state
         ) {
-            //viewModel.saveOnBoardingState(completed = true)
             popBackStack()
         }
     }

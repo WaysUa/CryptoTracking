@@ -1,7 +1,7 @@
 package com.main.feat_onboarding.data
 
 import androidx.annotation.DrawableRes
-import com.main.core.R
+import com.main.feat_onboarding.R
 
 sealed class OnBoardingPage(
     @DrawableRes
@@ -10,20 +10,23 @@ sealed class OnBoardingPage(
     val description: String,
 ) {
     object FirstScreen : OnBoardingPage(
-        image = R.drawable.first,
-        title = "Top Coins",
-        description = "get access to all information's about the top coins in the market"
+        image = R.drawable.icon_onboarding_first,
+        title = "Track Your Crypto",
+        description = "Track and buy cryptocurrencies at real value, trade with ease and confidence\n" +
+                "in one safe and fast application."
     )
 
     object SecondScreen : OnBoardingPage(
-        image = R.drawable.second,
-        title = "Be Borderless",
-        description = "tracking your favorite coins allows you to get custom notifications about the coin and a lot more"
+        image = R.drawable.icon_onboarding_second,
+        title = "Explore Best Coins",
+        description = "All cryptos go through a rigorous evaluation process and are compared to " +
+                "thousands of other crypto projects."
     )
 
     object ThirdScreen : OnBoardingPage(
-        image = R.drawable.third,
-        title = "Hottest News",
-        description = "You have access to the hottest and newest news about the crypto market"
+        image = R.drawable.icon_onboarding_third,
+        title = "Fast Optimization",
+        description = "Ongoing optimization of portfolios to market conditions and adjustment of " +
+                "cryptocurrency selection."
     )
 }
