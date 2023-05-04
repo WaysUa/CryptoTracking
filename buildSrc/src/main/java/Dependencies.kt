@@ -23,12 +23,11 @@ object Dependencies {
         const val activityCompose = "androidx.activity:activity-compose:1.7.1"
     }
 
-    object Hilt {
-        private const val version = "2.45"
+    object Koin {
+        private const val version = "3.4.0"
 
-        const val android = "com.google.dagger:hilt-android:$version"
-        const val navigation = "androidx.hilt:hilt-navigation-compose:1.0.0"
-        const val compiler = "com.google.dagger:hilt-compiler:$version"
+        const val android = "io.insert-koin:koin-android:$version"
+        const val compose = "io.insert-koin:koin-androidx-compose:$version"
     }
 
     object Navigation {
@@ -42,6 +41,12 @@ object Dependencies {
 
         const val pager = "com.google.accompanist:accompanist-pager:$version"
         const val pagerIndicators = "com.google.accompanist:accompanist-pager-indicators:$version"
+    }
+
+    object DataStore {
+        private const val version = "1.0.0"
+
+        const val main = "androidx.datastore:datastore-preferences:$version"
     }
 
     object SplashScreen {

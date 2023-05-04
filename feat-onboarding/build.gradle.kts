@@ -63,9 +63,13 @@ dependencies {
     androidTestImplementation(Dependencies.Test.jUnitUi)
     androidTestImplementation(Dependencies.Test.espresso)
     testImplementation(Dependencies.Test.jUnit)
-    //Pager
+    // Koin
+    implementation(Dependencies.Koin.android)
+    implementation(Dependencies.Koin.compose)
+    // Pager
     implementation (Dependencies.Pager.pager)
     implementation (Dependencies.Pager.pagerIndicators)
-    //Modules
+    // Modules
     implementation(project(Modules.coreModule))
+    implementation(project(Modules.coreDataSourceModule))
 }

@@ -68,13 +68,13 @@ dependencies {
     testImplementation(Dependencies.Test.jUnit)
     // Navigation
     implementation(Dependencies.Navigation.navigationCompose)
-    // Hilt
-    implementation(Dependencies.Hilt.android)
-    implementation(Dependencies.Hilt.compiler)
-    implementation(Dependencies.Hilt.navigation)
-    //Splash Screen
+    // Koin
+    implementation(Dependencies.Koin.android)
+    implementation(Dependencies.Koin.compose)
+    // Splash Screen
     implementation(Dependencies.SplashScreen.main)
-    //Modules
+    // Modules
     implementation(project(Modules.coreModule))
+    implementation(project(Modules.coreDataSourceModule))
     implementation(project(Modules.featOnBoardingModule))
 }

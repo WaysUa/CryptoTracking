@@ -5,16 +5,17 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.main.cryptotracking.navigation.main.MainNavigationGraph
+import com.main.cryptotracking.screen.SplashScreen
 import com.main.feat_onboarding.screen.OnBoardingScreen
 
 @Composable
 fun RootNavigationGraph(
     navController: NavHostController,
-    startDestination: String = RootNavigationGraphRoutes.ON_BOARDING,
+    startDestination: String
 ) {
     NavHost(
         navController = navController,
-        route = RootNavigationGraphRoutes.ROOT,
+        route = "root_graph",
         startDestination = startDestination
     ) {
         composable(route = RootNavigationGraphRoutes.ON_BOARDING) {
@@ -28,11 +29,14 @@ fun RootNavigationGraph(
         composable(route = RootNavigationGraphRoutes.MAIN) {
             MainNavigationGraph()
         }
+        composable(route = RootNavigationGraphRoutes.START) {
+            SplashScreen()
+        }
     }
 }
 
 object RootNavigationGraphRoutes {
-    const val ROOT = "root_graph"
     const val MAIN = "main_graph"
-    const val ON_BOARDING = "on_boarding"
+    const val ON_BOARDING = "on_boarding_graph"
+    const val START = "start"
 }

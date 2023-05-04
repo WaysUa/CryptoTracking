@@ -22,11 +22,14 @@ import com.main.feat_onboarding.components.CustomOnBoardingButton
 import com.main.feat_onboarding.components.OnBoardingTopSection
 import com.main.feat_onboarding.components.PagerScreen
 import com.main.feat_onboarding.data.OnBoardingPage
+import com.main.feat_onboarding.viewmodel.OnBoardingViewModel
 import kotlinx.coroutines.launch
+import org.koin.androidx.compose.koinViewModel
 
 @OptIn(ExperimentalPagerApi::class)
 @Composable
 fun OnBoardingScreen(
+    onBoardingViewModel: OnBoardingViewModel = koinViewModel(),
     popBackStack: () -> Unit,
 ) {
     val pager = listOf(
@@ -89,6 +92,7 @@ fun OnBoardingScreen(
         CustomOnBoardingButton(
             pagerState = state
         ) {
+            onBoardingViewModel.saveOnBoardingState(completed = true)
             popBackStack()
         }
     }

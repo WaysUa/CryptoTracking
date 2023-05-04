@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <application
+        tools:replace="android:appComponentFactory"
+        android:appComponentFactory="androidx"
         android:name="com.main.cryptotracking.app.CryptoTrackingApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
