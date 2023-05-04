@@ -1,18 +1,15 @@
 plugins {
-    id(Plugins.application)
+    id(Plugins.library)
     id(Plugins.android)
 }
 
 android {
-    namespace = Config.appModulePackageName
+    namespace = Config.featTrackingModulePackageName
     compileSdk = Config.compileSdk
 
     defaultConfig {
-        applicationId = Config.appModulePackageName
         minSdk = Config.minSdk
         targetSdk = Config.targetSdk
-        versionCode = Config.versionCode
-        versionName = Config.versionName
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
@@ -66,16 +63,9 @@ dependencies {
     androidTestImplementation(Dependencies.Test.jUnitUi)
     androidTestImplementation(Dependencies.Test.espresso)
     testImplementation(Dependencies.Test.jUnit)
-    // Navigation
-    implementation(Dependencies.Navigation.navigationCompose)
     // Koin
     implementation(Dependencies.Koin.android)
     implementation(Dependencies.Koin.compose)
-    // Splash Screen
-    implementation(Dependencies.SplashScreen.main)
     // Modules
     implementation(project(Modules.coreModule))
-    implementation(project(Modules.coreDataSourceModule))
-    implementation(project(Modules.featOnBoardingModule))
-    implementation(project(Modules.featTrackingModule))
 }
