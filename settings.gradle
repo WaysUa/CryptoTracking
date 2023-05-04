@@ -16,3 +16,4 @@ rootProject.name = "CryptoTracking"
 include ':app'
 include ':core'
 include ':feat-onboarding'
+include ':core-datasource'
