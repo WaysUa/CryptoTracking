@@ -16,11 +16,15 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import com.main.core.ui.theme.DarkColor
 import com.main.feat_tracking.R
+import com.main.feat_tracking.viewmodel.TrackingViewModel
+import org.koin.androidx.compose.koinViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @Composable
-fun TrackingViewDisplay() {
+fun TrackingViewDisplay(
+    onClickedIconSearch: () -> Unit
+) {
     Scaffold(
         topBar = {
             TopAppBar(
@@ -38,7 +42,7 @@ fun TrackingViewDisplay() {
                     titleContentColor = Color.White
                 ),
                 actions = {
-                    IconButton(onClick = { /*todo doSomething() */ }) {
+                    IconButton(onClick = { onClickedIconSearch.invoke() }) {
                         Icon(
                             imageVector = Icons.Filled.Search,
                             contentDescription = "Search Coins",

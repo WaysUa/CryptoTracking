@@ -6,6 +6,7 @@ import androidx.compose.runtime.livedata.observeAsState
 import com.main.feat_tracking.data.TrackingEvent
 import com.main.feat_tracking.data.TrackingViewState
 import com.main.feat_tracking.ui.views.TrackingViewDisplay
+import com.main.feat_tracking.ui.views.TrackingViewSearch
 import com.main.feat_tracking.viewmodel.TrackingViewModel
 import kotlinx.coroutines.delay
 import org.koin.androidx.compose.koinViewModel
@@ -17,9 +18,12 @@ fun TrackingScreen(
     val viewState = trackingViewModel.trackingViewState.observeAsState()
 
     when (val state = viewState.value) {
-        TrackingViewState.Display -> TrackingViewDisplay()
-        //todo change Unit to any screen
-        TrackingViewState.Searching -> Unit
+        TrackingViewState.Display -> TrackingViewDisplay {
+            trackingViewModel.obtainEvent(TrackingEvent.SearchScreen)
+        }
+        TrackingViewState.Searching -> TrackingViewSearch {
+            trackingViewModel.obtainEvent(TrackingEvent.EnterScreen)
+        }
         else -> throw NotImplementedError("Unexpected recording state")
     }
 

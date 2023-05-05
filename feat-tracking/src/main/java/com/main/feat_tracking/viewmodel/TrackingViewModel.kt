@@ -1,5 +1,8 @@
 package com.main.feat_tracking.viewmodel
 
+import androidx.compose.runtime.MutableState
+import androidx.compose.runtime.State
+import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -13,6 +16,13 @@ class TrackingViewModel(
 
     private val _trackingViewState: MutableLiveData<TrackingViewState> = MutableLiveData(TrackingViewState.Display)
     val trackingViewState: LiveData<TrackingViewState> = _trackingViewState
+
+    private val _searchTextState: MutableState<String> = mutableStateOf(value = "")
+    val searchTextState: State<String> = _searchTextState
+
+    fun updateSearchTextState(text: String) {
+        _searchTextState.value = text
+    }
 
     override fun obtainEvent(event: TrackingEvent) {
         when(event) {
