@@ -1,4 +1,4 @@
-package com.main.feat_onboarding.components
+package com.main.feat_onboarding.ui.components
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.layout.Arrangement

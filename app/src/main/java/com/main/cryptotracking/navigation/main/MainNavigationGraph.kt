@@ -7,7 +7,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.google.accompanist.systemuicontroller.SystemUiController
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
-import com.main.cryptotracking.screen.MainScreen
+import com.main.feat_tracking.ui.screen.TrackingScreen
 
 @Composable
 fun MainNavigationGraph(
@@ -16,7 +16,7 @@ fun MainNavigationGraph(
 ) {
     NavHost(navController = navController, startDestination = MainNavigationGraphRoutes.MAIN_SCREEN) {
         composable(MainNavigationGraphRoutes.MAIN_SCREEN) {
-            MainScreen()
+            TrackingScreen()
         }
     }
 }

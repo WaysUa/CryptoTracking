@@ -6,7 +6,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.main.cryptotracking.navigation.main.MainNavigationGraph
 import com.main.cryptotracking.screen.SplashScreen
-import com.main.feat_onboarding.screen.OnBoardingScreen
+import com.main.feat_onboarding.ui.screen.OnBoardingScreen
 
 @Composable
 fun RootNavigationGraph(
