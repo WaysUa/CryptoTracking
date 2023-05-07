@@ -13,7 +13,7 @@ class MainViewModel(
     private val dataStoreRepository: DataStoreRepository
 ) : ViewModel() {
 
-    private val _startDestination: MutableState<String> = mutableStateOf(RootNavigationGraphRoutes.START)
+    private val _startDestination: MutableState<String> = mutableStateOf(RootNavigationGraphRoutes.ON_BOARDING)
     val startDestination: State<String> = _startDestination
 
     init {

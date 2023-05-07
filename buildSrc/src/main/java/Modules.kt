@@ -4,4 +4,5 @@ object Modules {
     const val featOnBoardingModule = ":feat-onboarding"
     const val featTrackingModule = ":feat-tracking"
     const val featSignUpModule = ":feat-signup"
+    const val featSignInModule = ":feat-signin"
 }

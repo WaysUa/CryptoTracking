@@ -23,7 +23,7 @@ fun RootNavigationGraph(
             OnBoardingScreen(
                 popBackStack = {
                     navController.popBackStack()
-                    navController.navigate(RootNavigationGraphRoutes.MAIN)
+                    navController.navigate(RootNavigationGraphRoutes.AUTHENTICATION)
                 }
             )
         }

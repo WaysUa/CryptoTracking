@@ -6,7 +6,6 @@ import androidx.activity.compose.setContent
 import androidx.navigation.compose.rememberNavController
 import com.main.core.ui.theme.CryptoTrackingTheme
 import com.main.cryptotracking.navigation.root.RootNavigationGraph
-import com.main.cryptotracking.navigation.root.RootNavigationGraphRoutes
 import com.main.cryptotracking.viewmodel.MainViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -21,7 +20,7 @@ class MainActivity : ComponentActivity() {
                 val startDestination = mainViewModel.startDestination.value
                 RootNavigationGraph(
                     navController = navController,
-                    startDestination = RootNavigationGraphRoutes.AUTHENTICATION
+                    startDestination = startDestination
                 )
             }
         }

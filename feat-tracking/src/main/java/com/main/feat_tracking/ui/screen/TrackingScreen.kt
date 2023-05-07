@@ -8,7 +8,6 @@ import com.main.feat_tracking.data.TrackingViewState
 import com.main.feat_tracking.ui.views.TrackingViewDisplay
 import com.main.feat_tracking.ui.views.TrackingViewSearch
 import com.main.feat_tracking.viewmodel.TrackingViewModel
-import kotlinx.coroutines.delay
 import org.koin.androidx.compose.koinViewModel
 
 @Composable

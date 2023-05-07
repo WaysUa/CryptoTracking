@@ -79,4 +79,5 @@ dependencies {
     implementation(project(Modules.featOnBoardingModule))
     implementation(project(Modules.featTrackingModule))
     implementation(project(Modules.featSignUpModule))
+    implementation(project(Modules.featSignInModule))
 }
