@@ -15,9 +15,9 @@
             <option value="$PROJECT_DIR$/buildSrc" />
             <option value="$PROJECT_DIR$/core" />
             <option value="$PROJECT_DIR$/core-datasource" />
+            <option value="$PROJECT_DIR$/feat-auth-signin" />
+            <option value="$PROJECT_DIR$/feat-auth-signup" />
             <option value="$PROJECT_DIR$/feat-onboarding" />
-            <option value="$PROJECT_DIR$/feat-signin" />
-            <option value="$PROJECT_DIR$/feat-signup" />
             <option value="$PROJECT_DIR$/feat-tracking" />
           </set>
         </option>
