@@ -1,4 +1,4 @@
-package com.main.feat_signup.ui.screen
+package com.main.feat_signin.ui.screen
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -37,27 +37,24 @@ import com.main.core.ui.theme.MalibuLightColor
 import com.main.core.ui.theme.authButtonColors
 
 @Composable
-fun SignUpScreen(
-    onGoToSignInClicked: () -> Unit,
-    onSignUpCLicked: () -> Unit
+fun SignInScreen(
+    onGoToSignUpClicked: () -> Unit,
+    onSignInCLicked: () -> Unit
 ) {
-    val username = remember { mutableStateOf("") }
-    val email = remember { mutableStateOf("") }
+    val usernameOrEmail = remember { mutableStateOf("") }
     val password = remember { mutableStateOf("") }
-    val confirmPassword = remember { mutableStateOf("") }
     val passwordVisibility = remember { mutableStateOf(false) }
-    val confirmPasswordVisibility = remember { mutableStateOf(false) }
 
     Column(
         modifier = Modifier
             .fillMaxSize()
             .background(DarkColor)
             .padding(16.dp)
-            .padding(bottom = 25.dp),
+            .padding(bottom = 15.dp),
         verticalArrangement = Arrangement.Center
     ) {
         Text(
-            text = "Sign Up",
+            text = "Sign In",
             fontSize = 40.sp,
             fontWeight = FontWeight.W700,
             modifier = Modifier
@@ -67,23 +64,12 @@ fun SignUpScreen(
         )
 
         OutlinedTextField(
-            value = username.value,
-            onValueChange = { username.value = it },
-            label = { Text("Username") },
+            value = usernameOrEmail.value,
+            onValueChange = { usernameOrEmail.value = it },
+            label = { Text("Username or Email") },
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(top = 20.dp),
-            colors = authButtonColors(),
-            singleLine = true
-        )
-
-        OutlinedTextField(
-            value = email.value,
-            onValueChange = { email.value = it },
-            label = { Text("Email") },
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(top = 16.dp),
             colors = authButtonColors(),
             singleLine = true
         )
@@ -117,37 +103,8 @@ fun SignUpScreen(
             }
         )
 
-        OutlinedTextField(
-            value = confirmPassword.value,
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(top = 16.dp),
-            onValueChange = { confirmPassword.value = it },
-            label = { Text("Confirm Password") },
-            colors = authButtonColors(),
-            singleLine = true,
-            visualTransformation = if (confirmPasswordVisibility.value) {
-                VisualTransformation.None
-            } else {
-                PasswordVisualTransformation()
-            },
-            trailingIcon = {
-                val visibilityIcon = if (confirmPasswordVisibility.value) {
-                    painterResource(id = R.drawable.icon_show_password)
-                } else {
-                    painterResource(id = R.drawable.icon_hide_password)
-                }
-                IconButton(onClick = { confirmPasswordVisibility.value = !confirmPasswordVisibility.value }) {
-                    Image(
-                        painter = visibilityIcon,
-                        contentDescription = "Toggle password visibility"
-                    )
-                }
-            }
-        )
-
         Button(
-            onClick = { onSignUpCLicked.invoke() },
+            onClick = { onSignInCLicked.invoke() },
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(top = 22.dp)
@@ -158,7 +115,7 @@ fun SignUpScreen(
                 contentColor = Color.White,
             )
         ) {
-            Text(text = "Sign Up", fontSize = 22.sp)
+            Text(text = "Sign In", fontSize = 22.sp)
         }
 
         Row(
@@ -168,16 +125,16 @@ fun SignUpScreen(
             horizontalArrangement = Arrangement.Center
         ) {
             Text(
-                text = "Already have an account?",
+                text = "Don't have an account?",
                 color = Color.Gray
             )
-            Spacer(modifier = Modifier.padding(start = 7.dp))
+            Spacer(modifier = Modifier.padding(start = 10.dp))
             Text(
-                text = "Sign In",
+                text = "Sign Up",
                 color = Color.White,
                 fontWeight = FontWeight.Bold,
                 modifier = Modifier.clickable {
-                    onGoToSignInClicked.invoke()
+                    onGoToSignUpClicked.invoke()
                 }
             )
         }
@@ -186,6 +143,6 @@ fun SignUpScreen(
 
 @Composable
 @Preview(showBackground = true)
-fun PreviewSignUpScreen() {
-    SignUpScreen({}, {})
+fun PreviewSignInScreen() {
+    SignInScreen({}, {})
 }

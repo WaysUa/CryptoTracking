@@ -20,7 +20,7 @@ class MainViewModel(
         viewModelScope.launch {
             dataStoreRepository.readOnBoardingState().collect { completed ->
                 if (completed) {
-                    _startDestination.value = RootNavigationGraphRoutes.MAIN
+                    _startDestination.value = RootNavigationGraphRoutes.AUTHENTICATION
                 } else {
                     _startDestination.value = RootNavigationGraphRoutes.ON_BOARDING
                 }
