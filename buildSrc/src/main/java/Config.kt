@@ -8,6 +8,7 @@ object Config {
     const val coreDatasouceModulePackageName = "com.main.core_datasource"
     const val featOnBoardingModulePackageName = "com.main.feat_onboarding"
     const val featTrackingModulePackageName = "com.main.feat_tracking"
+    const val featSignUpModulePackageName = "com.main.feat_signup"
 
     const val versionName = "1.0"
     const val versionCode = 1

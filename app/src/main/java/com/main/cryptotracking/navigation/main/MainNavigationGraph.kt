@@ -11,8 +11,7 @@ import com.main.feat_tracking.ui.screen.TrackingScreen
 
 @Composable
 fun MainNavigationGraph(
-    navController: NavHostController = rememberNavController(),
-    systemUiController: SystemUiController = rememberSystemUiController()
+    navController: NavHostController = rememberNavController()
 ) {
     NavHost(navController = navController, startDestination = MainNavigationGraphRoutes.MAIN_SCREEN) {
         composable(MainNavigationGraphRoutes.MAIN_SCREEN) {
