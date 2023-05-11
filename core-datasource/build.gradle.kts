@@ -68,4 +68,9 @@ dependencies {
     implementation(Dependencies.Koin.compose)
     // Data Store
     implementation(Dependencies.DataStore.main)
+    // Firebase
+    implementation(Dependencies.Firebase.auth)
+
+    // Modules
+    implementation(project(Modules.coreModule))
 }

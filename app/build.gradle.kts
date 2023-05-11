@@ -1,6 +1,7 @@
 plugins {
     id(Plugins.application)
     id(Plugins.android)
+    id(Plugins.firebase)
 }
 
 android {

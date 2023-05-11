@@ -3,7 +3,7 @@ object Config {
     const val minSdk = 24
     const val targetSdk = 33
 
-    const val appModulePackageName = "com.main.voicevortex"
+    const val appModulePackageName = "com.main.cryptotracking"
     const val coreModulePackageName = "com.main.core"
     const val coreDatasouceModulePackageName = "com.main.core_datasource"
     const val featOnBoardingModulePackageName = "com.main.feat_onboarding"

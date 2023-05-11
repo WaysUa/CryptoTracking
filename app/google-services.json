@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "791832561877",
+    "project_id": "cryptotracking-waysua",
+    "storage_bucket": "cryptotracking-waysua.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:791832561877:android:9038d4d9269cc60ab53a5c",
+        "android_client_info": {
+          "package_name": "com.main.cryptotracking"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "791832561877-917nfgeeq05jb2qjtk9u3fgq7sq9f15p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.main.cryptotracking",
+            "certificate_hash": "9c45469bdd5cd7a6605a13e2bbb1bfdb2a5fb78a"
+          }
+        },
+        {
+          "client_id": "791832561877-p0m4qe2okkneasr86volc9dkrvmu465l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyASIHbPxtdxDUyqQ5maZaOW4QnFvUDZv3o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "791832561877-p0m4qe2okkneasr86volc9dkrvmu465l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

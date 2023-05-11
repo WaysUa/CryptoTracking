@@ -13,7 +13,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import com.main.core.ui.theme.DarkColor
-import com.main.voicevortex.R
+import com.main.cryptotracking.R
 
 @Composable
 fun SplashScreen() {

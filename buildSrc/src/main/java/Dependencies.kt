@@ -53,6 +53,10 @@ object Dependencies {
         const val main = "androidx.core:core-splashscreen:1.0.1"
     }
 
+    object Firebase {
+        const val auth = "com.google.firebase:firebase-auth-ktx:22.0.0"
+    }
+
     object Test {
         const val jUnit = "junit:junit:4.13.2"
         const val jUnitExt = "androidx.test.ext:junit:1.1.5"

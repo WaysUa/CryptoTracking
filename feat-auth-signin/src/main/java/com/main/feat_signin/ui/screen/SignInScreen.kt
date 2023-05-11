@@ -66,7 +66,7 @@ fun SignInScreen(
         OutlinedTextField(
             value = usernameOrEmail.value,
             onValueChange = { usernameOrEmail.value = it },
-            label = { Text("Username or Email") },
+            label = { Text("Email") },
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(top = 20.dp),
