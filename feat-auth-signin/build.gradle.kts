@@ -68,4 +68,5 @@ dependencies {
     implementation(Dependencies.Koin.compose)
     // Modules
     implementation(project(Modules.coreModule))
+    implementation(project(Modules.coreDataSourceModule))
 }
