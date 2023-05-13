@@ -1,6 +1,5 @@
 package com.main.feat_signup.ui.views
 
-import android.util.Log
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -33,7 +32,6 @@ import androidx.compose.ui.unit.sp
 import com.main.core.R
 import com.main.core.ui.theme.DarkColor
 import com.main.core.ui.theme.MalibuLightColor
-import com.main.core.ui.theme.OrangeColor
 import com.main.core.ui.theme.authButtonColors
 import com.main.feat_signup.data.SignUpInputTextStates
 import com.main.feat_signup.viewmodel.SignUpViewModel

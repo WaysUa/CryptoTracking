@@ -1,6 +1,5 @@
 package com.main.core_datasource.firebase.auth
 
-import android.util.Log
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
 import com.main.core.Resource

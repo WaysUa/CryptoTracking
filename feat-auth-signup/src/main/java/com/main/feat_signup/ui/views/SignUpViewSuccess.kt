@@ -18,6 +18,8 @@ import androidx.compose.material.IconButton
 import androidx.compose.material.OutlinedTextField
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -33,15 +35,19 @@ import com.main.core.ui.theme.DarkColor
 import com.main.core.ui.theme.MalibuLightColor
 import com.main.core.ui.theme.authButtonColors
 import com.main.feat_signup.data.SignUpInputTextStates
+import com.main.feat_signup.ui.component.SuccessAlertDialog
 import com.main.feat_signup.viewmodel.SignUpViewModel
 import org.koin.androidx.compose.koinViewModel
 
 @Composable
-fun SignUpViewDisplay(
+fun SignUpViewSuccess(
     onGoToSignInClicked: () -> Unit,
     signUpInputTextStates: SignUpInputTextStates,
     signUpViewModel: SignUpViewModel = koinViewModel(),
 ) {
+    val dialogShowState = remember {
+        mutableStateOf(true)
+    }
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -188,6 +194,11 @@ fun SignUpViewDisplay(
                     onGoToSignInClicked.invoke()
                 }
             )
+        }
+    }
+    if (dialogShowState.value) {
+        SuccessAlertDialog {
+            dialogShowState.value = !dialogShowState.value
         }
     }
 }

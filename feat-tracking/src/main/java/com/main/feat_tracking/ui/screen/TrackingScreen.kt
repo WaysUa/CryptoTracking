@@ -3,7 +3,6 @@ package com.main.feat_tracking.ui.screen
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
-import androidx.compose.runtime.livedata.observeAsState
 import com.main.feat_tracking.data.TrackingEvent
 import com.main.feat_tracking.data.TrackingViewState
 import com.main.feat_tracking.ui.views.TrackingViewDisplay

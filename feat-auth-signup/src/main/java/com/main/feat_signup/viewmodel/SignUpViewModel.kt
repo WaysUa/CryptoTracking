@@ -1,17 +1,14 @@
 package com.main.feat_signup.viewmodel
 
-import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.main.core.EventHandler
-import com.main.core.Resource
 import com.main.core_datasource.firebase.auth.FirebaseAuthRepository
 import com.main.feat_signup.data.SignUpEvent
 import com.main.feat_signup.data.SignUpViewState
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
-import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.launch
 
 class SignUpViewModel(
