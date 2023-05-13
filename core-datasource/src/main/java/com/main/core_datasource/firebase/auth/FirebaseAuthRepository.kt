@@ -6,10 +6,10 @@ import kotlinx.coroutines.flow.Flow
 
 interface FirebaseAuthRepository {
 
-    fun signUpWithEmailAndPassword(
+    suspend fun signUpWithEmailAndPassword(
         email: String,
         password: String
-    ): Flow<Resource<AuthResult>>
+    ): Resource<AuthResult>
 
     fun signInWithEmailAndPassword(
         email: String,

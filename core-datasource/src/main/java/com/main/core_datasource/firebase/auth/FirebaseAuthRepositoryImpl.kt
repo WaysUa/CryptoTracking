@@ -1,5 +1,6 @@
 package com.main.core_datasource.firebase.auth
 
+import android.util.Log
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
 import com.main.core.Resource
@@ -12,17 +13,18 @@ class FirebaseAuthRepositoryImpl(
     private val firebaseAuth: FirebaseAuth,
 ) : FirebaseAuthRepository {
 
-    override fun signUpWithEmailAndPassword(
+    override suspend fun signUpWithEmailAndPassword(
         email: String,
         password: String,
-    ): Flow<Resource<AuthResult>> {
-        return flow {
-            emit(Resource.Loading())
+    ): Resource<AuthResult> {
+        val result = firebaseAuth.createUserWithEmailAndPassword(email, password)
 
-            val result = firebaseAuth.createUserWithEmailAndPassword(email, password).await()
-            emit(Resource.Success(result))
-        }.catch {
-            emit(Resource.Error(it.toString()))
+        return try {
+            result.await()
+            firebaseAuth.currentUser?.sendEmailVerification()
+            Resource.Success(result.result)
+        } catch (e: Exception) {
+            Resource.Error(result.exception?.message.toString())
         }
     }
 

@@ -1,5 +1,6 @@
 package com.main.feat_signup.viewmodel
 
+import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.main.core.EventHandler
@@ -22,22 +23,12 @@ class SignUpViewModel(
 
     fun signUp(email: String, password: String) {
         viewModelScope.launch(Dispatchers.IO) {
-            firebaseAuthRepository.signUpWithEmailAndPassword(email, password).onEach { result ->
-                when (result) {
-                    is Resource.Success -> {
-                        _signUpViewState.emit(SignUpViewState.Success(result = result.data))
-                    }
-
-                    is Resource.Error -> {
-                        _signUpViewState.emit(
-                            SignUpViewState.Error(result.message.toString())
-                        )
-                    }
-
-                    is Resource.Loading -> {
-                        _signUpViewState.emit(SignUpViewState.Loading)
-                    }
-                }
+            _signUpViewState.emit(SignUpViewState.Loading)
+            val result = firebaseAuthRepository.signUpWithEmailAndPassword(email, password)
+            if (result.data != null) {
+                _signUpViewState.emit(SignUpViewState.Success(result.data))
+            } else {
+                _signUpViewState.emit(SignUpViewState.Error(result.message.toString()))
             }
         }
     }
@@ -47,6 +38,15 @@ class SignUpViewModel(
             when (event) {
                 is SignUpEvent.EnterScreen -> {
                     _signUpViewState.emit(SignUpViewState.Display)
+                }
+                is SignUpEvent.ErrorScreen -> {
+                    _signUpViewState.emit(SignUpViewState.Error(event.error))
+                }
+                is SignUpEvent.LoadingScreen -> {
+                    _signUpViewState.emit(SignUpViewState.Loading)
+                }
+                is SignUpEvent.SuccessScreen -> {
+                    _signUpViewState.emit(SignUpViewState.Success(event.result))
                 }
             }
         }

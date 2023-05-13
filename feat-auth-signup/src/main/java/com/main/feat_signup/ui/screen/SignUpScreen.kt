@@ -1,5 +1,6 @@
 package com.main.feat_signup.ui.screen
 
+import android.util.Log
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
@@ -10,13 +11,13 @@ import com.main.feat_signup.data.SignUpEvent
 import com.main.feat_signup.data.SignUpInputTextStates
 import com.main.feat_signup.data.SignUpViewState
 import com.main.feat_signup.ui.views.SignUpViewDisplay
+import com.main.feat_signup.ui.views.SignUpViewLoading
 import com.main.feat_signup.viewmodel.SignUpViewModel
 import org.koin.androidx.compose.koinViewModel
 
 @Composable
 fun SignUpScreen(
     onGoToSignInClicked: () -> Unit,
-    onSignUpCLicked: () -> Unit,
     signUpViewModel: SignUpViewModel = koinViewModel()
 ) {
     val viewState = signUpViewModel.signUpViewState.collectAsState()
@@ -34,12 +35,26 @@ fun SignUpScreen(
     )
 
     when (val state = viewState.value) {
-        SignUpViewState.Display -> SignUpViewDisplay(
-            onGoToSignInClicked = { /*TODO*/ },
-            onSignUpCLicked = { /*TODO*/ },
-            signUpInputTextStates = signUpInputTextStates
-        )
-        else -> throw NotImplementedError("Unexpected recording state")
+        is SignUpViewState.Display -> {
+            Log.d("MyLog", "Display")
+            SignUpViewDisplay(
+                onGoToSignInClicked = { onGoToSignInClicked.invoke() },
+                signUpInputTextStates = signUpInputTextStates
+            )
+        }
+        is SignUpViewState.Loading -> {
+            Log.d("MyLog", "Loading")
+            SignUpViewLoading(
+                onGoToSignInClicked = { onGoToSignInClicked.invoke() },
+                signUpInputTextStates = signUpInputTextStates
+            )
+        }
+        is SignUpViewState.Error -> {
+            Log.d("MyLog", "Error")
+        }
+        is SignUpViewState.Success -> {
+            Log.d("MyLog", "Success")
+        }
     }
 
     LaunchedEffect(key1 = Unit, block = {
@@ -50,5 +65,5 @@ fun SignUpScreen(
 @Composable
 @Preview(showBackground = true)
 fun PreviewSignUpScreen() {
-    SignUpScreen({}, {})
+    SignUpScreen({})
 }
