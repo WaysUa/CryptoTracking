@@ -11,8 +11,8 @@ interface FirebaseAuthRepository {
         password: String
     ): Resource<AuthResult>
 
-    fun signInWithEmailAndPassword(
+    suspend fun signInWithEmailAndPassword(
         email: String,
         password: String
-    ): Flow<Resource<AuthResult>>
+    ): Resource<AuthResult>
 }

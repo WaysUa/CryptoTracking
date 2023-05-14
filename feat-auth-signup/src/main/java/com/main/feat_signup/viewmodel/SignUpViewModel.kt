@@ -12,7 +12,7 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
 
 class SignUpViewModel(
-    private val firebaseAuthRepository: FirebaseAuthRepository,
+    private val firebaseAuthRepository: FirebaseAuthRepository
 ) : ViewModel(), EventHandler<SignUpEvent> {
 
     private val _signUpViewState: MutableStateFlow<SignUpViewState> = MutableStateFlow(SignUpViewState.Display)

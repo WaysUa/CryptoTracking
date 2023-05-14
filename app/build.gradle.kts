@@ -72,6 +72,8 @@ dependencies {
     // Koin
     implementation(Dependencies.Koin.android)
     implementation(Dependencies.Koin.compose)
+    // Firebase
+    implementation(Dependencies.Firebase.auth)
     // Splash Screen
     implementation(Dependencies.SplashScreen.main)
     // Modules

@@ -5,6 +5,7 @@ import com.main.core_datasource.di.dataStoreModule
 import com.main.core_datasource.di.firebaseModule
 import com.main.cryptotracking.di.applicationModule
 import com.main.feat_onboarding.di.onBoardingModule
+import com.main.feat_signin.di.signInModule
 import com.main.feat_signup.di.signUpModule
 import com.main.feat_tracking.di.trackingModule
 import org.koin.android.ext.koin.androidContext
@@ -25,7 +26,8 @@ class CryptoTrackingApplication : Application() {
                     applicationModule,
                     trackingModule,
                     firebaseModule,
-                    signUpModule
+                    signUpModule,
+                    signInModule
                 )
             )
         }

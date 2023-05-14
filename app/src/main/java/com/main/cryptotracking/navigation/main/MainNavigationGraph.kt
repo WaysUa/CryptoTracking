@@ -11,13 +11,13 @@ import com.main.feat_tracking.ui.screen.TrackingScreen
 fun MainNavigationGraph(
     navController: NavHostController = rememberNavController()
 ) {
-    NavHost(navController = navController, startDestination = MainNavigationGraphRoutes.MAIN_SCREEN) {
-        composable(MainNavigationGraphRoutes.MAIN_SCREEN) {
+    NavHost(navController = navController, startDestination = MainNavigationGraphRoutes.TRACKING_SCREEN) {
+        composable(MainNavigationGraphRoutes.TRACKING_SCREEN) {
             TrackingScreen()
         }
     }
 }
 
 object MainNavigationGraphRoutes {
-    const val MAIN_SCREEN = "main_screen"
+    const val TRACKING_SCREEN = "tracking_screen"
 }

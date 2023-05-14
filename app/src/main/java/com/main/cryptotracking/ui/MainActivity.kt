@@ -5,6 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.navigation.compose.rememberNavController
+import com.google.firebase.auth.FirebaseAuth
 import com.main.core.ui.theme.CryptoTrackingTheme
 import com.main.cryptotracking.navigation.root.RootNavigationGraph
 import com.main.cryptotracking.viewmodel.MainViewModel
@@ -22,7 +23,7 @@ class MainActivity : ComponentActivity() {
                 val startDestination = mainViewModel.startDestination.value
                 RootNavigationGraph(
                     navController = navController,
-                    startDestination = startDestination
+                    startDestination = startDestination,
                 )
             }
         }

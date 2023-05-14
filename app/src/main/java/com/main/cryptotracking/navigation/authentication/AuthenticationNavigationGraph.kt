@@ -26,9 +26,6 @@ fun AuthenticationNavigationGraph(
                 onGoToSignUpClicked = {
                     navController.popBackStack()
                     navController.navigate(AuthenticationNavigationGraphRoutes.SIGN_UP_SCREEN)
-                },
-                onSignInCLicked = {
-                    // todo handle sign in logic
                 }
             )
         }

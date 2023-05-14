@@ -27,17 +27,18 @@ class FirebaseAuthRepositoryImpl(
         }
     }
 
-    override fun signInWithEmailAndPassword(
+    override suspend fun signInWithEmailAndPassword(
         email: String,
         password: String,
-    ): Flow<Resource<AuthResult>> {
-        return flow {
-            emit(Resource.Loading())
+    ): Resource<AuthResult> {
+        val result = firebaseAuth.signInWithEmailAndPassword(email, password)
 
-            val result = firebaseAuth.signInWithEmailAndPassword(email, password).await()
-            emit(Resource.Success(result))
-        }.catch {
-            emit(Resource.Error(it.message ?: "Unexpected Message"))
+        return try {
+            result.await()
+
+            Resource.Success(result.result)
+        } catch (e: Exception) {
+            Resource.Error(result.exception?.message.toString())
         }
     }
 }
