@@ -151,12 +151,7 @@ fun SignUpViewLoading(
         )
 
         Button(
-            onClick = {
-                signUpViewModel.signUp(
-                    signUpInputTextStates.email.value,
-                    signUpInputTextStates.password.value
-                )
-            },
+            onClick = {  },
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(top = 22.dp)
@@ -167,9 +162,7 @@ fun SignUpViewLoading(
                 contentColor = Color.White,
             )
         ) {
-            CircularProgressIndicator(
-                color = Color.White
-            )
+            CircularProgressIndicator(color = Color.White)
         }
 
         Row(

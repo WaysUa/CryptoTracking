@@ -10,6 +10,7 @@ import com.main.feat_signin.data.SignInEvent
 import com.main.feat_signin.data.SignInInputTextStates
 import com.main.feat_signin.data.SignInViewState
 import com.main.feat_signin.ui.views.SignInViewDisplay
+import com.main.feat_signin.ui.views.SignInViewLoading
 import com.main.feat_signin.viewmodel.SignInViewModel
 import org.koin.androidx.compose.koinViewModel
 
@@ -20,27 +21,31 @@ fun SignInScreen(
 ) {
     val viewState = signInViewModel.signInViewState.collectAsState()
 
-    val usernameOrEmail = remember { mutableStateOf("") }
+    val email = remember { mutableStateOf("") }
     val password = remember { mutableStateOf("") }
     val passwordVisibility = remember { mutableStateOf(false) }
 
     val signInInputTextStates = SignInInputTextStates(
-        usernameOrEmail, password, passwordVisibility
+        email, password, passwordVisibility
     )
 
     when (viewState.value) {
         is SignInViewState.Display -> {
-            SignInViewDisplay(signInInputTextStates = signInInputTextStates) {
-                onGoToSignUpClicked.invoke()
-            }
-        }
-        is SignInViewState.Error -> {
-
+            SignInViewDisplay(
+                signInInputTextStates = signInInputTextStates,
+                onGoToSignUpClicked = { onGoToSignUpClicked.invoke() }
+            )
         }
         is SignInViewState.Loading -> {
-
+            SignInViewLoading(
+                signInInputTextStates = signInInputTextStates,
+                onGoToSignUpClicked = { onGoToSignUpClicked.invoke() }
+            )
         }
         is SignInViewState.Success -> {
+
+        }
+        is SignInViewState.Error -> {
 
         }
     }

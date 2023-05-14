@@ -14,6 +14,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Button
 import androidx.compose.material.ButtonDefaults
+import androidx.compose.material.CircularProgressIndicator
 import androidx.compose.material.IconButton
 import androidx.compose.material.OutlinedTextField
 import androidx.compose.material.Text
@@ -37,7 +38,7 @@ import com.main.feat_signin.viewmodel.SignInViewModel
 import org.koin.androidx.compose.koinViewModel
 
 @Composable
-fun SignInViewDisplay(
+fun SignInViewLoading(
     signInInputTextStates: SignInInputTextStates,
     onGoToSignUpClicked: () -> Unit,
     signInViewModel: SignInViewModel = koinViewModel()
@@ -94,7 +95,7 @@ fun SignInViewDisplay(
                 IconButton(
                     onClick = {
                         signInInputTextStates.passwordVisibility.value =
-                        !signInInputTextStates.passwordVisibility.value
+                            !signInInputTextStates.passwordVisibility.value
                     }
                 ) {
                     Image(
@@ -106,12 +107,7 @@ fun SignInViewDisplay(
         )
 
         Button(
-            onClick = {
-                signInViewModel.signIn(
-                    signInInputTextStates.email.value,
-                    signInInputTextStates.password.value
-                )
-            },
+            onClick = {  },
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(top = 22.dp)
@@ -122,7 +118,7 @@ fun SignInViewDisplay(
                 contentColor = Color.White,
             )
         ) {
-            Text(text = "Sign In", fontSize = 22.sp)
+            CircularProgressIndicator(color = Color.White)
         }
 
         Row(

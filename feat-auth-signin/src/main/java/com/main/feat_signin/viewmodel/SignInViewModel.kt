@@ -41,7 +41,7 @@ class SignInViewModel(
 
                }
                is SignInEvent.LoadingScreen -> {
-
+                    _signInViewState.emit(SignInViewState.Loading)
                }
            }
        }
