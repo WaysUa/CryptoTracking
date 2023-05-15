@@ -23,7 +23,7 @@ class SignInViewModel(
             _signInViewState.emit(SignInViewState.Loading)
             val result = firebaseAuthRepository.signInWithEmailAndPassword(email, password)
             if (result.data != null) {
-                _signInViewState.emit(SignInViewState.Success(result.data))
+                _signInViewState.emit(SignInViewState.Success)
             } else {
                 _signInViewState.emit(SignInViewState.Error(result.message.toString()))
             }

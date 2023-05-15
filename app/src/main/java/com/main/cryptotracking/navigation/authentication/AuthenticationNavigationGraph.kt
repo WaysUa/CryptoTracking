@@ -5,6 +5,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.main.cryptotracking.navigation.main.MainNavigationGraphRoutes
 import com.main.feat_signin.ui.screen.SignInScreen
 import com.main.feat_signup.ui.screen.SignUpScreen
 
@@ -26,6 +27,10 @@ fun AuthenticationNavigationGraph(
                 onGoToSignUpClicked = {
                     navController.popBackStack()
                     navController.navigate(AuthenticationNavigationGraphRoutes.SIGN_UP_SCREEN)
+                },
+                onSuccessfulSignIn = {
+                    navController.popBackStack()
+                    navController.navigate(MainNavigationGraphRoutes.TRACKING_SCREEN)
                 }
             )
         }

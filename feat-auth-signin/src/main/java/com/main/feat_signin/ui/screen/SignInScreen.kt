@@ -17,6 +17,7 @@ import org.koin.androidx.compose.koinViewModel
 @Composable
 fun SignInScreen(
     onGoToSignUpClicked: () -> Unit,
+    onSuccessfulSignIn: () -> Unit,
     signInViewModel: SignInViewModel = koinViewModel()
 ) {
     val viewState = signInViewModel.signInViewState.collectAsState()
@@ -43,7 +44,7 @@ fun SignInScreen(
             )
         }
         is SignInViewState.Success -> {
-
+            onSuccessfulSignIn.invoke()
         }
         is SignInViewState.Error -> {
 
@@ -58,5 +59,5 @@ fun SignInScreen(
 @Composable
 @Preview(showBackground = true)
 fun PreviewSignInScreen() {
-    SignInScreen({})
+    SignInScreen({}, {})
 }
