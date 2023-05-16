@@ -7,6 +7,7 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.tooling.preview.Preview
+import com.main.core.data.SignInData
 import com.main.feat_signin.data.SignInEvent
 import com.main.feat_signin.data.SignInInputTextStates
 import com.main.feat_signin.data.SignInViewState
@@ -23,7 +24,7 @@ fun SignInScreen(
 ) {
     val viewState = signInViewModel.signInViewState.collectAsState()
 
-    val email = remember { mutableStateOf("") }
+    val email = remember { mutableStateOf("sds@gmail.com") }
     val password = remember { mutableStateOf("") }
     val passwordVisibility = remember { mutableStateOf(false) }
 

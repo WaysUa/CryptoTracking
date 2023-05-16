@@ -1,6 +1,7 @@
 package com.main.cryptotracking.app
 
 import android.app.Application
+import com.main.core.di.coreModule
 import com.main.core_datasource.di.dataStoreModule
 import com.main.core_datasource.di.firebaseModule
 import com.main.cryptotracking.di.applicationModule
@@ -27,7 +28,8 @@ class CryptoTrackingApplication : Application() {
                     trackingModule,
                     firebaseModule,
                     signUpModule,
-                    signInModule
+                    signInModule,
+                    coreModule
                 )
             )
         }

@@ -1,8 +1,7 @@
 package com.main.core_datasource.firebase.auth
 
 import com.google.firebase.auth.AuthResult
-import com.main.core.Resource
-import kotlinx.coroutines.flow.Flow
+import com.main.core.data.Resource
 
 interface FirebaseAuthRepository {
 

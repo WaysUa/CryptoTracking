@@ -5,7 +5,7 @@ import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.main.core.EventHandler
+import com.main.core.domain.EventHandler
 import com.main.feat_tracking.data.TrackingEvent
 import com.main.feat_tracking.data.TrackingViewState
 import kotlinx.coroutines.Dispatchers

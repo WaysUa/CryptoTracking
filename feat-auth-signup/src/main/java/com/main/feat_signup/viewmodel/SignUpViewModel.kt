@@ -2,7 +2,7 @@ package com.main.feat_signup.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.main.core.EventHandler
+import com.main.core.domain.EventHandler
 import com.main.core_datasource.firebase.auth.FirebaseAuthRepository
 import com.main.feat_signup.data.SignUpEvent
 import com.main.feat_signup.data.SignUpViewState

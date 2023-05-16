@@ -6,6 +6,6 @@ import org.koin.dsl.module
 
 val signInModule = module {
     viewModel {
-        SignInViewModel(firebaseAuthRepository = get())
+        SignInViewModel(firebaseAuthRepository = get(), inputTextValidationRepository = get())
     }
 }

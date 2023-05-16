@@ -2,10 +2,7 @@ package com.main.core_datasource.firebase.auth
 
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
-import com.main.core.Resource
-import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.catch
-import kotlinx.coroutines.flow.flow
+import com.main.core.data.Resource
 import kotlinx.coroutines.tasks.await
 
 class FirebaseAuthRepositoryImpl(

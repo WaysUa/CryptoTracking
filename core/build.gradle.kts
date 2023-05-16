@@ -63,4 +63,7 @@ dependencies {
     androidTestImplementation(Dependencies.Test.jUnitUi)
     androidTestImplementation(Dependencies.Test.espresso)
     testImplementation(Dependencies.Test.jUnit)
+    // Koin
+    implementation(Dependencies.Koin.android)
+    implementation(Dependencies.Koin.compose)
 }
