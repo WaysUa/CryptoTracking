@@ -1,5 +1,6 @@
 package com.main.feat_tracking.ui.screen
 
+import android.util.Log
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
@@ -14,6 +15,8 @@ import org.koin.androidx.compose.koinViewModel
 fun TrackingScreen(
     trackingViewModel: TrackingViewModel = koinViewModel()
 ) {
+    Log.d("MyLog", "Hello, TrackingScreen")
+
     val viewState = trackingViewModel.trackingViewState.collectAsState()
 
     when (val state = viewState.value) {
@@ -25,7 +28,7 @@ fun TrackingScreen(
         }
     }
 
-    LaunchedEffect(key1 = viewState, block = {
+    LaunchedEffect(key1 = { }, block = {
         trackingViewModel.obtainEvent(TrackingEvent.EnterScreen)
     })
 }

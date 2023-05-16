@@ -6,6 +6,6 @@ import org.koin.dsl.module
 
 val applicationModule = module {
     viewModel {
-        MainViewModel(dataStoreRepository = get())
+        MainViewModel(dataStoreRepository = get(), firebaseAuth = get())
     }
 }

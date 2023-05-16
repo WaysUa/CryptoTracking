@@ -5,12 +5,14 @@ import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.google.firebase.auth.FirebaseAuth
 import com.main.core_datasource.datastore.DataStoreRepository
 import com.main.cryptotracking.navigation.root.RootNavigationGraphRoutes
 import kotlinx.coroutines.launch
 
 class MainViewModel(
-    private val dataStoreRepository: DataStoreRepository
+    private val dataStoreRepository: DataStoreRepository,
+    private val firebaseAuth: FirebaseAuth
 ) : ViewModel() {
 
     private val _startDestination: MutableState<String> = mutableStateOf(RootNavigationGraphRoutes.ON_BOARDING)
@@ -20,7 +22,14 @@ class MainViewModel(
         viewModelScope.launch {
             dataStoreRepository.readOnBoardingState().collect { completed ->
                 if (completed) {
-                    _startDestination.value = RootNavigationGraphRoutes.AUTHENTICATION
+                    if (
+                        firebaseAuth.currentUser != null &&
+                        firebaseAuth.currentUser?.isEmailVerified == true
+                    ) {
+                        _startDestination.value = RootNavigationGraphRoutes.MAIN
+                    } else {
+                        _startDestination.value = RootNavigationGraphRoutes.AUTHENTICATION
+                    }
                 } else {
                     _startDestination.value = RootNavigationGraphRoutes.ON_BOARDING
                 }

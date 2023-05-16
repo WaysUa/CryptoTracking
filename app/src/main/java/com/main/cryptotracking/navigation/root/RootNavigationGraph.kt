@@ -37,11 +37,16 @@ fun RootNavigationGraph(
                 }
             )
         }
+        composable(route = RootNavigationGraphRoutes.AUTHENTICATION) {
+            AuthenticationNavigationGraph(
+                navigateToTrackingScreen = {
+                    navController.popBackStack()
+                    navController.navigate(RootNavigationGraphRoutes.MAIN)
+                }
+            )
+        }
         composable(route = RootNavigationGraphRoutes.MAIN) {
             MainNavigationGraph()
-        }
-        composable(route = RootNavigationGraphRoutes.AUTHENTICATION) {
-            AuthenticationNavigationGraph()
         }
     }
 }

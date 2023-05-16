@@ -11,6 +11,7 @@ import com.main.feat_signup.ui.screen.SignUpScreen
 
 @Composable
 fun AuthenticationNavigationGraph(
+    navigateToTrackingScreen: () -> Unit,
     navController: NavHostController = rememberNavController()
 ) {
     NavHost(navController = navController, startDestination = AuthenticationNavigationGraphRoutes.SIGN_UP_SCREEN) {
@@ -29,8 +30,7 @@ fun AuthenticationNavigationGraph(
                     navController.navigate(AuthenticationNavigationGraphRoutes.SIGN_UP_SCREEN)
                 },
                 onSuccessfulSignIn = {
-                    navController.popBackStack()
-                    navController.navigate(MainNavigationGraphRoutes.TRACKING_SCREEN)
+                    navigateToTrackingScreen.invoke()
                 }
             )
         }
