@@ -79,7 +79,6 @@ dependencies {
     // Modules
     implementation(project(Modules.coreModule))
     implementation(project(Modules.coreDatasourceModule))
-    implementation(project(Modules.coreExceptionsModule))
     implementation(project(Modules.featOnBoardingModule))
     implementation(project(Modules.featTrackingModule))
     implementation(project(Modules.featSignUpModule))

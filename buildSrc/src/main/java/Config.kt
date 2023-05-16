@@ -6,7 +6,6 @@ object Config {
     const val appModulePackageName = "com.main.cryptotracking"
     const val coreModulePackageName = "com.main.core"
     const val coreDatasouceModulePackageName = "com.main.core_datasource"
-    const val coreExceptionsModulePackageName = "com.main.core_exceptions"
     const val featOnBoardingModulePackageName = "com.main.feat_onboarding"
     const val featTrackingModulePackageName = "com.main.feat_tracking"
     const val featSignUpModulePackageName = "com.main.feat_signup"
