@@ -1,5 +1,6 @@
 package com.main.feat_signin.ui.screen
 
+import android.util.Log
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
@@ -30,7 +31,7 @@ fun SignInScreen(
         email, password, passwordVisibility
     )
 
-    when (viewState.value) {
+    when (val state = viewState.value) {
         is SignInViewState.Display -> {
             SignInViewDisplay(
                 signInInputTextStates = signInInputTextStates,
@@ -47,7 +48,11 @@ fun SignInScreen(
             onSuccessfulSignIn.invoke()
         }
         is SignInViewState.Error -> {
-
+            SignInViewLoading(
+                signInInputTextStates = signInInputTextStates,
+                onGoToSignUpClicked = { onGoToSignUpClicked.invoke() }
+            )
+            Log.d("MyLog", "SignInScreen, error: ${state.error}")
         }
     }
 

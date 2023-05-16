@@ -71,5 +71,5 @@ dependencies {
     implementation (Dependencies.Pager.pagerIndicators)
     // Modules
     implementation(project(Modules.coreModule))
-    implementation(project(Modules.coreDataSourceModule))
+    implementation(project(Modules.coreDatasourceModule))
 }

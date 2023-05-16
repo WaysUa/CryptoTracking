@@ -70,5 +70,5 @@ dependencies {
     implementation(Dependencies.Firebase.auth)
     // Modules
     implementation(project(Modules.coreModule))
-    implementation(project(Modules.coreDataSourceModule))
+    implementation(project(Modules.coreDatasourceModule))
 }

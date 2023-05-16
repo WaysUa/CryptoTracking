@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = Config.featSignInModulePackageName
+    namespace = Config.coreExceptionsModulePackageName
     compileSdk = Config.compileSdk
 
     defaultConfig {
@@ -66,9 +66,6 @@ dependencies {
     // Koin
     implementation(Dependencies.Koin.android)
     implementation(Dependencies.Koin.compose)
-    // Firebase
-    implementation(Dependencies.Firebase.auth)
     // Modules
     implementation(project(Modules.coreModule))
-    implementation(project(Modules.coreDatasourceModule))
 }

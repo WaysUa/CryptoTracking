@@ -40,8 +40,7 @@ import org.koin.androidx.compose.koinViewModel
 @Composable
 fun SignInViewLoading(
     signInInputTextStates: SignInInputTextStates,
-    onGoToSignUpClicked: () -> Unit,
-    signInViewModel: SignInViewModel = koinViewModel()
+    onGoToSignUpClicked: () -> Unit
 ) {
     Column(
         modifier = Modifier

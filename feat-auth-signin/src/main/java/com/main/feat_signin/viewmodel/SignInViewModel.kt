@@ -1,5 +1,6 @@
 package com.main.feat_signin.viewmodel
 
+import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.main.core_datasource.firebase.auth.FirebaseAuthRepository

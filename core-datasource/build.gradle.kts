@@ -70,7 +70,6 @@ dependencies {
     implementation(Dependencies.DataStore.main)
     // Firebase
     implementation(Dependencies.Firebase.auth)
-
     // Modules
     implementation(project(Modules.coreModule))
 }
