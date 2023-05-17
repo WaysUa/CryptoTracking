@@ -1,4 +1,4 @@
-package com.main.feat_signin.data
+package com.main.feat_signin.data.entities
 
 sealed class SignInEvent {
 

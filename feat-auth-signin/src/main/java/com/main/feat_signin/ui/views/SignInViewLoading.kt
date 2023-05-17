@@ -33,9 +33,7 @@ import com.main.core.R
 import com.main.core.ui.theme.DarkColor
 import com.main.core.ui.theme.MalibuLightColor
 import com.main.core.ui.theme.authButtonColors
-import com.main.feat_signin.data.SignInInputTextStates
-import com.main.feat_signin.viewmodel.SignInViewModel
-import org.koin.androidx.compose.koinViewModel
+import com.main.feat_signin.data.entities.SignInInputTextStates
 
 @Composable
 fun SignInViewLoading(

@@ -7,10 +7,9 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.tooling.preview.Preview
-import com.main.core.data.SignInData
-import com.main.feat_signin.data.SignInEvent
-import com.main.feat_signin.data.SignInInputTextStates
-import com.main.feat_signin.data.SignInViewState
+import com.main.feat_signin.data.entities.SignInEvent
+import com.main.feat_signin.data.entities.SignInInputTextStates
+import com.main.feat_signin.data.entities.SignInViewState
 import com.main.feat_signin.ui.views.SignInViewDisplay
 import com.main.feat_signin.ui.views.SignInViewLoading
 import com.main.feat_signin.viewmodel.SignInViewModel
@@ -53,7 +52,7 @@ fun SignInScreen(
                 signInInputTextStates = signInInputTextStates,
                 onGoToSignUpClicked = { onGoToSignUpClicked.invoke() }
             )
-            Log.d("MyLog", "SignInScreen, error: ${state.error}")
+            Log.d("MyLog", "SignInScreen, error: ${state.exception.message}")
         }
     }
 

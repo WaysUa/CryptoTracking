@@ -1,4 +1,6 @@
-package com.main.feat_signin.data
+package com.main.feat_signin.data.entities
+
+import com.main.core.exceptions.ApplicationException
 
 sealed class SignInViewState {
 
@@ -7,7 +9,7 @@ sealed class SignInViewState {
     object Loading : SignInViewState()
 
     data class Error(
-        val error: String
+        val exception: ApplicationException
     ) : SignInViewState()
 
     object Success : SignInViewState()

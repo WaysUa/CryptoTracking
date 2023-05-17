@@ -1,6 +1,7 @@
 package com.main.core.validation.email
 
 import com.main.core.data.Resource
+import com.main.core.exceptions.EmailException
 import com.main.core.exceptions.Exceptions
 import java.util.regex.Pattern
 
@@ -11,9 +12,15 @@ class EmailValidationRepositoryImpl : EmailValidationRepository {
         val isEmailRight = Pattern.compile(EMAIL_REGEX).matcher(email).matches()
 
         return if (!isEmailEmpty) {
-            Resource.Error(Exceptions.EMAIL_IS_EMPTY_EXCEPTION)
+            Resource.Error(
+                data = false,
+                exception = EmailException(Exceptions.EMAIL_IS_EMPTY_EXCEPTION)
+            )
         } else if (!isEmailRight) {
-            Resource.Error(Exceptions.EMAIL_IS_WRONG_EXCEPTION)
+            Resource.Error(
+                data = false,
+                exception = EmailException(Exceptions.EMAIL_IS_WRONG_EXCEPTION)
+            )
         } else {
             Resource.Success(true)
         }

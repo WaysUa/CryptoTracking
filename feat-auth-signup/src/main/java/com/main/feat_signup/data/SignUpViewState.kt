@@ -1,6 +1,7 @@
 package com.main.feat_signup.data
 
 import com.google.firebase.auth.AuthResult
+import com.main.core.exceptions.ApplicationException
 
 sealed class SignUpViewState {
 
@@ -9,7 +10,7 @@ sealed class SignUpViewState {
     object Loading : SignUpViewState()
 
     data class Error(
-        val error: String
+        val exception: ApplicationException
     ) : SignUpViewState()
 
     data class Success(
