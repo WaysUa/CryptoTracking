@@ -38,10 +38,11 @@ import com.main.feat_signin.viewmodel.SignInViewModel
 import org.koin.androidx.compose.koinViewModel
 
 @Composable
-fun SignInViewDisplay(
+fun SignInViewError(
     signInInputTextStates: SignInInputTextStates,
     onGoToSignUpClicked: () -> Unit,
-    signInViewModel: SignInViewModel = koinViewModel()
+    signInViewModel: SignInViewModel = koinViewModel(),
+    exception: ApplicationException
 ) {
     Column(
         modifier = Modifier
@@ -62,6 +63,7 @@ fun SignInViewDisplay(
         )
 
         OutlinedTextField(
+            isError = signInInputTextStates.isErrorEmail,
             value = signInInputTextStates.email.value,
             onValueChange = { signInInputTextStates.email.value = it },
             label = { Text("Email") },
@@ -73,6 +75,7 @@ fun SignInViewDisplay(
         )
 
         OutlinedTextField(
+            isError = signInInputTextStates.isErrorPassword,
             value = signInInputTextStates.password.value,
             modifier = Modifier
                 .fillMaxWidth()
@@ -95,7 +98,7 @@ fun SignInViewDisplay(
                 IconButton(
                     onClick = {
                         signInInputTextStates.passwordVisibility.value =
-                        !signInInputTextStates.passwordVisibility.value
+                            !signInInputTextStates.passwordVisibility.value
                     }
                 ) {
                     Image(

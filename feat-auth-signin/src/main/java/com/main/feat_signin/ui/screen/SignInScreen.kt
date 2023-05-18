@@ -7,10 +7,13 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.tooling.preview.Preview
+import com.main.core.exceptions.EmailException
+import com.main.core.exceptions.UndefinedException
 import com.main.feat_signin.data.entities.SignInEvent
 import com.main.feat_signin.data.entities.SignInInputTextStates
 import com.main.feat_signin.data.entities.SignInViewState
 import com.main.feat_signin.ui.views.SignInViewDisplay
+import com.main.feat_signin.ui.views.SignInViewError
 import com.main.feat_signin.ui.views.SignInViewLoading
 import com.main.feat_signin.viewmodel.SignInViewModel
 import org.koin.androidx.compose.koinViewModel
@@ -28,7 +31,7 @@ fun SignInScreen(
     val passwordVisibility = remember { mutableStateOf(false) }
 
     val signInInputTextStates = SignInInputTextStates(
-        email, password, passwordVisibility
+        email, password, passwordVisibility, isErrorEmail = false, isErrorPassword = true
     )
 
     when (val state = viewState.value) {
@@ -48,16 +51,17 @@ fun SignInScreen(
             onSuccessfulSignIn.invoke()
         }
         is SignInViewState.Error -> {
-            SignInViewLoading(
+            SignInViewError(
                 signInInputTextStates = signInInputTextStates,
-                onGoToSignUpClicked = { onGoToSignUpClicked.invoke() }
+                onGoToSignUpClicked = { onGoToSignUpClicked.invoke() },
+                exception = EmailException("Email exception")
             )
-            Log.d("MyLog", "SignInScreen, error: ${state.exception.message}")
         }
     }
 
     LaunchedEffect(key1 = Unit, block = {
-        signInViewModel.obtainEvent(SignInEvent.EnterScreen)
+        //todo correct it
+        signInViewModel.obtainEvent(SignInEvent.ErrorScreen(UndefinedException("Hello World")))
     })
 }
 

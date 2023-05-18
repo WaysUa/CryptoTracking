@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = Config.featSignUpModulePackageName
+    namespace = Config.featAuthSignUpModulePackageName
     compileSdk = Config.compileSdk
 
     defaultConfig {

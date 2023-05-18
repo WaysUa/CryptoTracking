@@ -60,9 +60,8 @@ class SignInViewModel(
                is SignInEvent.EnterScreen -> {
                    _signInViewState.emit(SignInViewState.Display)
                }
-
                is SignInEvent.ErrorScreen -> {
-
+                   _signInViewState.emit(SignInViewState.Error(event.exception))
                }
                is SignInEvent.LoadingScreen -> {
                     _signInViewState.emit(SignInViewState.Loading)

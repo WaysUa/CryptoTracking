@@ -6,4 +6,6 @@ data class SignInInputTextStates(
     val email: MutableState<String>,
     val password: MutableState<String>,
     val passwordVisibility: MutableState<Boolean>,
+    val isErrorEmail: Boolean,
+    val isErrorPassword: Boolean
 )

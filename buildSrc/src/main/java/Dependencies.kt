@@ -10,6 +10,7 @@ object Dependencies {
         const val composeMaterial = "androidx.compose.material:material:1.4.2"
         const val accompanist = "com.google.accompanist:accompanist-systemuicontroller:0.31.1-alpha"
         const val composeLiveData = "androidx.compose.runtime:runtime-livedata:$version"
+        const val icons = "androidx.compose.material:material-icons-extended:$version"
 
         object Debug {
             const val composeUiTooling = "androidx.compose.ui:ui-tooling"

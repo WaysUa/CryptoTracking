@@ -1,5 +1,7 @@
 package com.main.feat_signin.data.entities
 
+import com.main.core.exceptions.ApplicationException
+
 sealed class SignInEvent {
 
     object EnterScreen : SignInEvent()
@@ -7,6 +9,6 @@ sealed class SignInEvent {
     object LoadingScreen : SignInEvent()
 
     data class ErrorScreen(
-        val error: String
+        val exception: ApplicationException
     ) : SignInEvent()
 }

@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = Config.coreDatasouceModulePackageName
+    namespace = Config.coreDatasourceModulePackageName
     compileSdk = Config.compileSdk
 
     defaultConfig {

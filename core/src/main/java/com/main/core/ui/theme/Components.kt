@@ -14,6 +14,9 @@ fun authButtonColors(): TextFieldColors {
         focusedLabelColor = Color.White,
         unfocusedLabelColor = Color.White,
         unfocusedIndicatorColor = Color(0xFF9C9DA2),
-        cursorColor = MalibuLightColor
+        cursorColor = MalibuLightColor,
+        errorIndicatorColor = InputErrorColor,
+        errorLabelColor = Color.White,
+        errorCursorColor = Color.White
     )
 }
