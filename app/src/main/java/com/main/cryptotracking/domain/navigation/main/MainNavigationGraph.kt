@@ -1,4 +1,4 @@
-package com.main.cryptotracking.navigation.main
+package com.main.cryptotracking.domain.navigation.main
 
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController

@@ -59,9 +59,28 @@ object Dependencies {
     }
 
     object Test {
-        const val jUnit = "junit:junit:4.13.2"
-        const val jUnitExt = "androidx.test.ext:junit:1.1.5"
-        const val jUnitUi = "androidx.compose.ui:ui-test-junit4"
-        const val espresso = "androidx.test.espresso:espresso-core:3.5.1"
+        object AndroidX {
+            const val core = "androidx.test:core:1.4.0"
+            const val jUnit = "androidx.test.ext:junit:1.1.3"
+            const val espresso = "androidx.test.espresso:espresso-core:3.5.1"
+            const val runner = "androidx.test:runner:1.4.0"
+            const val compose = "androidx.compose.ui:ui-test-junit4:1.1.0-alpha05"
+        }
+
+        object JUnit {
+            const val core = "junit:junit:4.13.2"
+        }
+
+        object Mockito {
+            private const val version = "3.11.2"
+
+            const val core = "org.mockito:mockito-core:3.11.2"
+            const val inline = "org.mockito:mockito-inline:3.11.2"
+        }
+
+        object KotlinX {
+
+            const val coroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.7.1"
+        }
     }
 }

@@ -59,10 +59,6 @@ dependencies {
     debugImplementation(Dependencies.Compose.Debug.composeUiTooling)
     debugImplementation(Dependencies.Compose.Debug.composeUiTestManifest)
     // Testing
-    androidTestImplementation(Dependencies.Test.jUnitExt)
-    androidTestImplementation(Dependencies.Test.jUnitUi)
-    androidTestImplementation(Dependencies.Test.espresso)
-    testImplementation(Dependencies.Test.jUnit)
     // Koin
     implementation(Dependencies.Koin.android)
     implementation(Dependencies.Koin.compose)

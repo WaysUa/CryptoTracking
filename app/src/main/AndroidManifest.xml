@@ -20,7 +20,7 @@
         tools:targetApi="31">
 
         <activity
-            android:name="com.main.cryptotracking.ui.MainActivity"
+            android:name="com.main.cryptotracking.presentation.ui.MainActivity"
             android:exported="true"
             android:theme="@style/Theme.CryptoSplashScreen">
             <intent-filter>

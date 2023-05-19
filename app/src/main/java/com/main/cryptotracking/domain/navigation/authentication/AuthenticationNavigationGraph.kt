@@ -1,11 +1,11 @@
-package com.main.cryptotracking.navigation.authentication
+package com.main.cryptotracking.domain.navigation.authentication
 
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.main.cryptotracking.navigation.main.MainNavigationGraphRoutes
+import com.main.cryptotracking.domain.navigation.main.MainNavigationGraphRoutes
 import com.main.feat_signin.ui.screen.SignInScreen
 import com.main.feat_signup.ui.screen.SignUpScreen
 

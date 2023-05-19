@@ -63,10 +63,10 @@ dependencies {
     debugImplementation(Dependencies.Compose.Debug.composeUiTooling)
     debugImplementation(Dependencies.Compose.Debug.composeUiTestManifest)
     // Testing
-    androidTestImplementation(Dependencies.Test.jUnitExt)
-    androidTestImplementation(Dependencies.Test.jUnitUi)
-    androidTestImplementation(Dependencies.Test.espresso)
-    testImplementation(Dependencies.Test.jUnit)
+    testImplementation(Dependencies.Test.Mockito.core)
+    testImplementation(Dependencies.Test.Mockito.inline)
+    testImplementation(Dependencies.Test.KotlinX.coroutines)
+    testImplementation(Dependencies.Test.JUnit.core)
     // Navigation
     implementation(Dependencies.Navigation.navigationCompose)
     // Koin
