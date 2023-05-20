@@ -9,7 +9,6 @@ import androidx.navigation.compose.ComposeNavigator
 import androidx.navigation.testing.TestNavHostController
 import com.main.core.data.testing.TestingConstants
 import junit.framework.TestCase.assertEquals
-import org.junit.Assert
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
@@ -40,10 +39,21 @@ class TestAuthenticationNavigationGraph {
     }
 
     @Test
-    fun some() {
+    fun testNavigationFromSignUpToSignIn() {
         val testTag = TestingConstants.testTagButtonNavigationToSignIn
         composeTestRule.onNodeWithTag(testTag = testTag).performClick()
         val route = navController.currentDestination?.route
         assertEquals(route, AuthenticationNavigationGraphRoutes.SIGN_IN_SCREEN)
+    }
+
+    @Test
+    fun testNavigationFromSignInToSignUp() {
+        val prevTestTag = TestingConstants.testTagButtonNavigationToSignIn
+        composeTestRule.onNodeWithTag(testTag = prevTestTag).performClick()
+
+        val testTag = TestingConstants.testTagButtonNavigationToSignUp
+        composeTestRule.onNodeWithTag(testTag = testTag).performClick()
+        val route = navController.currentDestination?.route
+        assertEquals(route, AuthenticationNavigationGraphRoutes.SIGN_UP_SCREEN)
     }
 }

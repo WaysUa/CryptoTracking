@@ -23,6 +23,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.PasswordVisualTransformation
@@ -30,6 +31,7 @@ import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.main.core.R
+import com.main.core.data.testing.TestingConstants
 import com.main.core.res.theme.DarkColor
 import com.main.core.res.theme.MalibuLightColor
 import com.main.core.res.theme.authButtonColors
@@ -133,9 +135,9 @@ fun SignInViewLoading(
                 text = "Sign Up",
                 color = Color.White,
                 fontWeight = FontWeight.Bold,
-                modifier = Modifier.clickable {
-                    onGoToSignUpClicked.invoke()
-                }
+                modifier = Modifier
+                    .testTag(TestingConstants.testTagButtonNavigationToSignUp)
+                    .clickable { onGoToSignUpClicked.invoke() }
             )
         }
     }

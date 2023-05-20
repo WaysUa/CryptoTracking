@@ -13,9 +13,10 @@ import com.main.feat_signup.ui.screen.SignUpScreen
 @Composable
 fun AuthenticationNavigationGraph(
     navigateToTrackingScreen: () -> Unit,
-    navController: NavHostController = rememberNavController()
+    navController: NavHostController = rememberNavController(),
+    startDestination: String = AuthenticationNavigationGraphRoutes.SIGN_UP_SCREEN
 ) {
-    NavHost(navController = navController, startDestination = AuthenticationNavigationGraphRoutes.SIGN_UP_SCREEN) {
+    NavHost(navController = navController, startDestination = startDestination) {
         composable(AuthenticationNavigationGraphRoutes.SIGN_UP_SCREEN) {
             SignUpScreen(
                 modifier = Modifier.testTag(AuthenticationNavigationGraphRoutes.SIGN_UP_SCREEN),
