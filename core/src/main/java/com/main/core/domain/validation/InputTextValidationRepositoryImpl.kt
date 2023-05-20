@@ -1,8 +1,8 @@
-package com.main.core.validation
+package com.main.core.domain.validation
 
 import com.main.core.data.Resource
 import com.main.core.data.SignInData
-import com.main.core.validation.email.EmailValidationRepository
+import com.main.core.domain.validation.email.EmailValidationRepository
 
 class InputTextValidationRepositoryImpl(
     private val emailValidationRepository: EmailValidationRepository

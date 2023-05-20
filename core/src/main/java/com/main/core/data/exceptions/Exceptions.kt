@@ -1,4 +1,4 @@
-package com.main.core.exceptions
+package com.main.core.data.exceptions
 
 object Exceptions {
     const val EMAIL_IS_EMPTY_EXCEPTION = "Email is empty"

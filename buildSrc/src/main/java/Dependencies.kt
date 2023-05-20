@@ -59,12 +59,16 @@ object Dependencies {
     }
 
     object Test {
+        object Compose {
+            const val navigation = "androidx.navigation:navigation-testing:2.5.3"
+            const val jUnit = "androidx.compose.ui:ui-test-junit4:1.4.3"
+        }
+
         object AndroidX {
             const val core = "androidx.test:core:1.4.0"
             const val jUnit = "androidx.test.ext:junit:1.1.3"
             const val espresso = "androidx.test.espresso:espresso-core:3.5.1"
             const val runner = "androidx.test:runner:1.4.0"
-            const val compose = "androidx.compose.ui:ui-test-junit4:1.1.0-alpha05"
         }
 
         object JUnit {

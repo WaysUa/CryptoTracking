@@ -1,8 +1,8 @@
-package com.main.core.validation.email
+package com.main.core.domain.validation.email
 
 import com.main.core.data.Resource
-import com.main.core.exceptions.EmailException
-import com.main.core.exceptions.Exceptions
+import com.main.core.data.exceptions.EmailException
+import com.main.core.data.exceptions.Exceptions
 import java.util.regex.Pattern
 
 class EmailValidationRepositoryImpl : EmailValidationRepository {

@@ -24,6 +24,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.PasswordVisualTransformation
@@ -31,9 +32,10 @@ import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.main.core.R
-import com.main.core.ui.theme.DarkColor
-import com.main.core.ui.theme.MalibuLightColor
-import com.main.core.ui.theme.authButtonColors
+import com.main.core.data.testing.TestingConstants
+import com.main.core.res.theme.DarkColor
+import com.main.core.res.theme.MalibuLightColor
+import com.main.core.res.theme.authButtonColors
 import com.main.feat_signup.data.SignUpInputTextStates
 import com.main.feat_signup.ui.component.SuccessAlertDialog
 import com.main.feat_signup.viewmodel.SignUpViewModel
@@ -41,6 +43,7 @@ import org.koin.androidx.compose.koinViewModel
 
 @Composable
 fun SignUpViewSuccess(
+    modifier: Modifier,
     onGoToSignInClicked: () -> Unit,
     signUpInputTextStates: SignUpInputTextStates,
     signUpViewModel: SignUpViewModel = koinViewModel(),
@@ -49,7 +52,7 @@ fun SignUpViewSuccess(
         mutableStateOf(true)
     }
     Column(
-        modifier = Modifier
+        modifier = modifier
             .fillMaxSize()
             .background(DarkColor)
             .padding(16.dp)
@@ -190,9 +193,9 @@ fun SignUpViewSuccess(
                 text = "Sign In",
                 color = Color.White,
                 fontWeight = FontWeight.Bold,
-                modifier = Modifier.clickable {
-                    onGoToSignInClicked.invoke()
-                }
+                modifier = Modifier
+                    .testTag(TestingConstants.testTagButtonNavigationToSignIn)
+                    .clickable { onGoToSignInClicked.invoke() }
             )
         }
     }

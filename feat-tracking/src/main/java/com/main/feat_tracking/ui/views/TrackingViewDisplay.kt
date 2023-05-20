@@ -14,7 +14,7 @@ import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
-import com.main.core.ui.theme.DarkColor
+import com.main.core.res.theme.DarkColor
 import com.main.feat_tracking.R
 
 @OptIn(ExperimentalMaterial3Api::class)

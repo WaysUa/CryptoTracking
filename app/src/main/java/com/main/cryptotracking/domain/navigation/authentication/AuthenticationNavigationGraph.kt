@@ -1,6 +1,8 @@
 package com.main.cryptotracking.domain.navigation.authentication
 
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.testTag
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -16,6 +18,7 @@ fun AuthenticationNavigationGraph(
     NavHost(navController = navController, startDestination = AuthenticationNavigationGraphRoutes.SIGN_UP_SCREEN) {
         composable(AuthenticationNavigationGraphRoutes.SIGN_UP_SCREEN) {
             SignUpScreen(
+                modifier = Modifier.testTag(AuthenticationNavigationGraphRoutes.SIGN_UP_SCREEN),
                 onGoToSignInClicked = {
                     navController.popBackStack()
                     navController.navigate(AuthenticationNavigationGraphRoutes.SIGN_IN_SCREEN)

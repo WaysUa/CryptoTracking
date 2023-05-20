@@ -2,7 +2,7 @@ package com.main.feat_signin.data.repository
 
 import com.main.core.data.Resource
 import com.main.core.data.SignInData
-import com.main.core.validation.InputTextValidationRepository
+import com.main.core.domain.validation.InputTextValidationRepository
 import com.main.core_datasource.firebase.auth.FirebaseAuthRepository
 import com.main.feat_signin.domain.repository.SignInRepository
 

@@ -6,8 +6,8 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.tooling.preview.Preview
-import com.main.core.exceptions.EmailException
-import com.main.core.exceptions.UndefinedException
+import com.main.core.data.exceptions.EmailException
+import com.main.core.data.exceptions.UndefinedException
 import com.main.feat_signin.data.entities.SignInEvent
 import com.main.feat_signin.data.entities.SignInInputTextStates
 import com.main.feat_signin.data.entities.SignInViewState

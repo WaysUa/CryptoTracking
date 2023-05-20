@@ -3,7 +3,7 @@ package com.main.core_datasource.firebase.auth
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
 import com.main.core.data.Resource
-import com.main.core.exceptions.FirebaseException
+import com.main.core.data.exceptions.FirebaseException
 import kotlinx.coroutines.tasks.await
 
 class FirebaseAuthRepositoryImpl(

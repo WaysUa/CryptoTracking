@@ -1,6 +1,6 @@
 package com.main.feat_signin.data.entities
 
-import com.main.core.exceptions.ApplicationException
+import com.main.core.data.exceptions.ApplicationException
 
 sealed class SignInEvent {
 

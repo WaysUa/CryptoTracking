@@ -1,4 +1,4 @@
-package com.main.core.exceptions
+package com.main.core.data.exceptions
 
 abstract class ApplicationException(message: String) : Exception(message)
 

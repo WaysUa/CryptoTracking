@@ -16,7 +16,7 @@ import androidx.compose.ui.unit.dp
 import com.google.accompanist.pager.ExperimentalPagerApi
 import com.google.accompanist.pager.HorizontalPager
 import com.google.accompanist.pager.rememberPagerState
-import com.main.core.ui.theme.DarkColor
+import com.main.core.res.theme.DarkColor
 import com.main.feat_onboarding.data.OnBoardingPage
 import com.main.feat_onboarding.ui.components.CustomBottomSection
 import com.main.feat_onboarding.ui.components.CustomOnBoardingButton

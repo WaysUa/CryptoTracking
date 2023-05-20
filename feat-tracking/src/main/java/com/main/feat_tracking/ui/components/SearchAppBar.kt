@@ -23,7 +23,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.unit.dp
-import com.main.core.ui.theme.DarkColor
+import com.main.core.res.theme.DarkColor
 
 @Composable
 fun SearchAppBar(

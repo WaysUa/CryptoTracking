@@ -19,7 +19,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.google.accompanist.pager.ExperimentalPagerApi
 import com.google.accompanist.pager.PagerState
-import com.main.core.ui.theme.MalibuLightColor
+import com.main.core.res.theme.MalibuLightColor
 
 
 @ExperimentalPagerApi

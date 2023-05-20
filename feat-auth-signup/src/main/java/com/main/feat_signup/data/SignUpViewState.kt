@@ -1,7 +1,7 @@
 package com.main.feat_signup.data
 
 import com.google.firebase.auth.AuthResult
-import com.main.core.exceptions.ApplicationException
+import com.main.core.data.exceptions.ApplicationException
 
 sealed class SignUpViewState {
 

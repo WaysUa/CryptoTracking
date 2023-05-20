@@ -5,7 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.navigation.compose.rememberNavController
-import com.main.core.ui.theme.CryptoTrackingTheme
+import com.main.core.res.theme.CryptoTrackingTheme
 import com.main.cryptotracking.domain.navigation.root.RootNavigationGraph
 import com.main.cryptotracking.presentation.viewmodel.MainViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel

@@ -1,4 +1,4 @@
-package com.main.core.validation
+package com.main.core.domain.validation
 
 import com.main.core.data.Resource
 import com.main.core.data.SignInData

@@ -30,9 +30,9 @@ import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.main.core.R
-import com.main.core.ui.theme.DarkColor
-import com.main.core.ui.theme.MalibuLightColor
-import com.main.core.ui.theme.authButtonColors
+import com.main.core.res.theme.DarkColor
+import com.main.core.res.theme.MalibuLightColor
+import com.main.core.res.theme.authButtonColors
 import com.main.feat_signin.data.entities.SignInInputTextStates
 
 @Composable

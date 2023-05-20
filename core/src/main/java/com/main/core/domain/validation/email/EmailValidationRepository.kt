@@ -1,4 +1,4 @@
-package com.main.core.validation.email
+package com.main.core.domain.validation.email
 
 import com.main.core.data.Resource
 

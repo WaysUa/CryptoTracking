@@ -6,8 +6,8 @@ import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import com.main.core.data.SignInData
 import com.main.core.domain.EventHandler
-import com.main.core.exceptions.EmailException
-import com.main.core.exceptions.PasswordException
+import com.main.core.data.exceptions.EmailException
+import com.main.core.data.exceptions.PasswordException
 import com.main.feat_signin.data.entities.SignInEvent
 import com.main.feat_signin.data.entities.SignInViewState
 import com.main.feat_signin.domain.usecases.SignInUseCase

@@ -1,4 +1,4 @@
-package com.main.core.ui.theme
+package com.main.core.res.theme
 
 import androidx.compose.material.TextFieldColors
 import androidx.compose.material.TextFieldDefaults

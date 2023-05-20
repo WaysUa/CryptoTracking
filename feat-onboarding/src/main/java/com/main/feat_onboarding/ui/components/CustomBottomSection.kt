@@ -17,7 +17,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.main.core.ui.theme.MalibuLightColor
+import com.main.core.res.theme.MalibuLightColor
 
 @Preview
 @Composable
