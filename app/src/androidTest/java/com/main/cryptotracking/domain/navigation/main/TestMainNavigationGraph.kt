@@ -1,12 +1,16 @@
 package com.main.cryptotracking.domain.navigation.main
 
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.junit4.createComposeRule
+import androidx.compose.ui.test.onNodeWithTag
 import androidx.navigation.compose.ComposeNavigator
 import androidx.navigation.testing.TestNavHostController
 import com.main.cryptotracking.domain.navigation.authentication.AuthenticationNavigationGraph
+import com.main.cryptotracking.domain.navigation.authentication.AuthenticationNavigationGraphRoutes
 import org.junit.Before
 import org.junit.Rule
+import org.junit.Test
 
 class TestMainNavigationGraph {
 
@@ -23,5 +27,10 @@ class TestMainNavigationGraph {
         }
     }
 
-
+    @Test
+    fun testStartDestinationInMainNavGraph() {
+        val testTag = MainNavigationGraphRoutes.TRACKING_SCREEN
+        val semanticsNoteInteraction = composeTestRule.onNodeWithTag(testTag = testTag)
+        semanticsNoteInteraction.assertIsDisplayed()
+    }
 }

@@ -32,7 +32,7 @@ class TestAuthenticationNavigationGraph {
     }
 
     @Test
-    fun testStartDestinationInAuthenticationNavGraph() {
+    fun testStartDestination() {
         val testTag = AuthenticationNavigationGraphRoutes.SIGN_UP_SCREEN
         val semanticsNoteInteraction = composeTestRule.onNodeWithTag(testTag = testTag)
         semanticsNoteInteraction.assertIsDisplayed()
