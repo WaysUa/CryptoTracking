@@ -10,7 +10,6 @@ import com.main.core.domain.DispatchersList
 import com.main.core.domain.Init
 import com.main.core_datasource.datastore.DataStoreRepository
 import com.main.cryptotracking.domain.navigation.root.RootNavigationGraphRoutes
-import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 
 class MainViewModel(

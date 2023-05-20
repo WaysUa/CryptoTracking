@@ -5,7 +5,6 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.main.cryptotracking.domain.navigation.main.MainNavigationGraphRoutes
 import com.main.feat_signin.ui.screen.SignInScreen
 import com.main.feat_signup.ui.screen.SignUpScreen
 

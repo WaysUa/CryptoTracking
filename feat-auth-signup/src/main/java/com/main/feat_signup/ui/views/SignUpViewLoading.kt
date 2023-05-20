@@ -34,8 +34,6 @@ import com.main.core.ui.theme.DarkColor
 import com.main.core.ui.theme.MalibuLightColor
 import com.main.core.ui.theme.authButtonColors
 import com.main.feat_signup.data.SignUpInputTextStates
-import com.main.feat_signup.viewmodel.SignUpViewModel
-import org.koin.androidx.compose.koinViewModel
 
 @Composable
 fun SignUpViewLoading(

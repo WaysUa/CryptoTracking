@@ -7,7 +7,6 @@ import com.google.firebase.ktx.Firebase
 import com.main.core.data.SignInData
 import com.main.core.domain.EventHandler
 import com.main.core.exceptions.EmailException
-import com.main.core.exceptions.Exceptions
 import com.main.core.exceptions.PasswordException
 import com.main.feat_signin.data.entities.SignInEvent
 import com.main.feat_signin.data.entities.SignInViewState
@@ -16,7 +15,6 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 
 class SignInViewModel(
     private val signInUseCase: SignInUseCase
