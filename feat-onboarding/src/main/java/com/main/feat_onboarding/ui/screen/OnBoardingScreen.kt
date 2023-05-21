@@ -29,6 +29,7 @@ import org.koin.androidx.compose.koinViewModel
 @OptIn(ExperimentalPagerApi::class)
 @Composable
 fun OnBoardingScreen(
+    modifier: Modifier,
     onBoardingViewModel: OnBoardingViewModel = koinViewModel(),
     popBackStack: () -> Unit,
 ) {
@@ -41,7 +42,7 @@ fun OnBoardingScreen(
     val scope = rememberCoroutineScope()
 
     Column(
-        modifier = Modifier
+        modifier = modifier
             .fillMaxSize()
             .padding(bottom = 32.dp)
             .background(DarkColor)

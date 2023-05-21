@@ -71,6 +71,8 @@ dependencies {
     androidTestImplementation(Dependencies.Test.Compose.navigation)
     androidTestImplementation(Dependencies.Test.Compose.jUnit)
     androidTestImplementation(Dependencies.Test.JUnit.core)
+    androidTestImplementation(Dependencies.Test.Mockito.core)
+    androidTestImplementation(Dependencies.Test.Mockito.inline)
     // Navigation
     implementation(Dependencies.Navigation.navigationCompose)
     // Koin
