@@ -6,13 +6,11 @@ import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.test.onNodeWithTag
 import androidx.navigation.compose.ComposeNavigator
 import androidx.navigation.testing.TestNavHostController
-import com.main.cryptotracking.domain.navigation.authentication.AuthenticationNavigationGraph
-import com.main.cryptotracking.domain.navigation.authentication.AuthenticationNavigationGraphRoutes
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 
-class TestMainNavigationGraph {
+class MainNavigationGraphTest {
 
     @get:Rule
     val composeTestRule = createComposeRule()

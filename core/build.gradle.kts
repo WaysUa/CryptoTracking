@@ -58,7 +58,11 @@ dependencies {
     implementation(Dependencies.Compose.composeLiveData)
     debugImplementation(Dependencies.Compose.Debug.composeUiTooling)
     debugImplementation(Dependencies.Compose.Debug.composeUiTestManifest)
-    // Testing
+    // Unit Testing
+    testImplementation(Dependencies.Test.Mockito.core)
+    testImplementation(Dependencies.Test.Mockito.inline)
+    testImplementation(Dependencies.Test.KotlinX.coroutines)
+    testImplementation(Dependencies.Test.JUnit.core)
     // Koin
     implementation(Dependencies.Koin.android)
     implementation(Dependencies.Koin.compose)
