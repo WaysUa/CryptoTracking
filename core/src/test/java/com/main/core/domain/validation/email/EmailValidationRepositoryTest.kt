@@ -13,7 +13,7 @@ class EmailValidationRepositoryTest {
     private val emailValidationRepository = mock(EmailValidationRepository::class.java)
 
     @Test
-    fun testSuccessEmail() {
+    fun testValidationSuccessEmail() {
         val email = "correctemail@gmail.com"
         Mockito.`when`(emailValidationRepository.isCorrectEmail(email)).thenReturn(Resource.Success(true))
 
@@ -22,7 +22,7 @@ class EmailValidationRepositoryTest {
     }
 
     @Test
-    fun testEmailButEmailIsEmpty() {
+    fun testValidationEmailButEmailIsEmpty() {
         val email = ""
         Mockito.`when`(emailValidationRepository.isCorrectEmail(email)).thenReturn(
             Resource.Error(false, EmailException(Exceptions.EMAIL_IS_EMPTY_EXCEPTION))
@@ -37,7 +37,7 @@ class EmailValidationRepositoryTest {
     }
 
     @Test
-    fun testEmailButEmailIsWrong() {
+    fun testValidationEmailButEmailIsWrong() {
         val email = "incorrectemail.gmail.com"
         Mockito.`when`(emailValidationRepository.isCorrectEmail(email)).thenReturn(
             Resource.Error(false, EmailException(Exceptions.EMAIL_IS_WRONG_EXCEPTION))
