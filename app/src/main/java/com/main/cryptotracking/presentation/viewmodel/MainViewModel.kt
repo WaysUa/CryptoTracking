@@ -11,6 +11,7 @@ import com.main.core.domain.Init
 import com.main.core_datasource.datastore.DataStoreRepository
 import com.main.cryptotracking.domain.navigation.root.RootNavigationGraphRoutes
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class MainViewModel(
     private val dataStoreRepository: DataStoreRepository,
@@ -28,17 +29,19 @@ class MainViewModel(
     override fun init() {
         viewModelScope.launch(dispatchers.io()) {
             dataStoreRepository.readOnBoardingState().collect { completed ->
-                if (completed) {
-                    if (
-                        firebaseAuth.currentUser != null &&
-                        firebaseAuth.currentUser?.isEmailVerified == true
-                    ) {
-                        _startDestination.value = RootNavigationGraphRoutes.MAIN
+                withContext(dispatchers.ui()) {
+                    if (completed) {
+                        if (
+                            firebaseAuth.currentUser != null &&
+                            firebaseAuth.currentUser?.isEmailVerified == true
+                        ) {
+                            _startDestination.value = RootNavigationGraphRoutes.MAIN
+                        } else {
+                            _startDestination.value = RootNavigationGraphRoutes.AUTHENTICATION
+                        }
                     } else {
-                        _startDestination.value = RootNavigationGraphRoutes.AUTHENTICATION
+                        _startDestination.value = RootNavigationGraphRoutes.ON_BOARDING
                     }
-                } else {
-                    _startDestination.value = RootNavigationGraphRoutes.ON_BOARDING
                 }
             }
         }

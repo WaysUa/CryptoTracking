@@ -7,8 +7,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.main.cryptotracking.domain.navigation.authentication.AuthenticationNavigationGraphRoutes
-import com.main.feat_tracking.ui.screen.TrackingScreen
+import com.main.feat_tracking.presentation.ui.screen.TrackingScreen
 
 @Composable
 fun MainNavigationGraph(

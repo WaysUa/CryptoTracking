@@ -10,7 +10,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.main.core.data.testing.TestingConstants
 import com.main.cryptotracking.domain.navigation.authentication.AuthenticationNavigationGraph
 import com.main.cryptotracking.domain.navigation.main.MainNavigationGraph
-import com.main.feat_onboarding.ui.screen.OnBoardingScreen
+import com.main.feat_onboarding.presentation.ui.screen.OnBoardingScreen
 
 @Composable
 fun RootNavigationGraph(

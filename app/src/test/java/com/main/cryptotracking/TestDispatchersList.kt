@@ -1,4 +1,4 @@
-package com.main.cryptotracking
+package com.main.cryptotracking // ktlint-disable filename
 
 import com.main.core.domain.DispatchersList
 import kotlinx.coroutines.CoroutineDispatcher

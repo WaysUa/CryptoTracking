@@ -1,7 +1,8 @@
 plugins {
-    id(Plugins.application)
-    id(Plugins.android)
-    id(Plugins.firebase)
+    id(Plugins.Application.dependency)
+    id(Plugins.Android.dependency)
+    id(Plugins.Firebase.dependency)
+    id(Plugins.Ktlint.depencency) version (Plugins.Ktlint.version)
 }
 
 android {

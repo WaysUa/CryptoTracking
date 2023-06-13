@@ -1,6 +1,6 @@
 package com.main.feat_signup.di
 
-import com.main.feat_signup.viewmodel.SignUpViewModel
+import com.main.feat_signup.presentation.viewmodel.SignUpViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 
